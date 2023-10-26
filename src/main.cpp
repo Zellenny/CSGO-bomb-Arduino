@@ -12,4 +12,6 @@ void setup() {
 
 void loop() {
     digitalWrite(ledGreen, HIGH);
+    digitalWrite(ledRed, HIGH);
+    digitalWrite(ledBlue, HIGH);
 }
