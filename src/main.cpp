@@ -1,6 +1,5 @@
 #include "arduino.h"
 #include <iostream>
-#include "time.h"
 
 #define ledGreen 2
 #define ledRed 0
@@ -16,7 +15,19 @@ void setup() {
 
 void loop() {
     for (int i = 0; i < currentTime; i++) {
-        delay(1000);
+        delay(0.333);
+        digitalWrite(ledGreen, HIGH);
+        digitalWrite(ledRed, LOW);
+        digitalWrite(ledBlue, LOW);
+        delay(0.333);
+        digitalWrite(ledGreen, LOW);
+        digitalWrite(ledRed, HIGH);
+        digitalWrite(ledBlue, LOW);
+        delay(0.333);
+        digitalWrite(ledGreen, LOW);
+        digitalWrite(ledRed, LOW);
+        digitalWrite(ledBlue, HIGH);
+
         currentTime++;
     }
     digitalWrite(ledGreen, HIGH);
